@@ -1,0 +1,130 @@
+{
+  "mode": "smoke",
+  "checkpoint": "C:\\Users\\huangmian\\Desktop\\桌面上的一些文件夹\\神经接收机\\runs\\normal_20261108_164820_989768\\best.pt",
+  "checkpoint_sha256": "8b66e3aac8b14c08f5cc1ae545c8897fea7b26e103c831880f34c63270aaf1df",
+  "checkpoint_epoch": 18,
+  "training_config": {
+    "train_frames": 4000,
+    "val_frames": 600,
+    "epochs": 20,
+    "batch_size": 512,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "hidden_dim": 128,
+    "ebn0_min": 0.0,
+    "ebn0_max": 20.0,
+    "seed": 2026,
+    "mode": "normal"
+  },
+  "training_simulation": {
+    "n_fft": 64,
+    "n_cp": 16,
+    "n_taps": 5,
+    "pilot_steps": 4,
+    "pilot_symbol": [
+      1.0,
+      0.0
+    ],
+    "qpsk_mapping": [
+      [
+        -0.7071067811865475,
+        -0.7071067811865475
+      ],
+      [
+        -0.7071067811865475,
+        0.7071067811865475
+      ],
+      [
+        0.7071067811865475,
+        -0.7071067811865475
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    ],
+    "features": [
+      "y_real",
+      "y_imag",
+      "h_ls_real",
+      "h_ls_imag"
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "baseline",
+      "true_taps": 5,
+      "rx_taps": 5,
+      "pilot_step": 4,
+      "profile": "exponential",
+      "n_fft": 64,
+      "n_cp": 16
+    },
+    {
+      "name": "taps2",
+      "true_taps": 2,
+      "rx_taps": 5,
+      "pilot_step": 4,
+      "profile": "exponential",
+      "n_fft": 64,
+      "n_cp": 16
+    },
+    {
+      "name": "taps8",
+      "true_taps": 8,
+      "rx_taps": 5,
+      "pilot_step": 4,
+      "profile": "exponential",
+      "n_fft": 64,
+      "n_cp": 16
+    },
+    {
+      "name": "flat8",
+      "true_taps": 8,
+      "rx_taps": 5,
+      "pilot_step": 4,
+      "profile": "uniform",
+      "n_fft": 64,
+      "n_cp": 16
+    },
+    {
+      "name": "flat8_rx8",
+      "true_taps": 8,
+      "rx_taps": 8,
+      "pilot_step": 4,
+      "profile": "uniform",
+      "n_fft": 64,
+      "n_cp": 16
+    },
+    {
+      "name": "pilot_dense",
+      "true_taps": 5,
+      "rx_taps": 5,
+      "pilot_step": 2,
+      "profile": "exponential",
+      "n_fft": 64,
+      "n_cp": 16
+    },
+    {
+      "name": "pilot_sparse",
+      "true_taps": 5,
+      "rx_taps": 5,
+      "pilot_step": 8,
+      "profile": "exponential",
+      "n_fft": 64,
+      "n_cp": 16
+    }
+  ],
+  "frames_per_trial": 20,
+  "repeats": 1,
+  "snrs": [
+    0,
+    12,
+    20
+  ],
+  "seed": 20261109,
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.3.5",
+  "device": "cpu"
+}

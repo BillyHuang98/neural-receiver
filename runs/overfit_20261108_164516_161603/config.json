@@ -1,0 +1,13 @@
+{
+  "train_frames": 4,
+  "val_frames": 4,
+  "epochs": 300,
+  "batch_size": 512,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "hidden_dim": 128,
+  "ebn0_min": 30.0,
+  "ebn0_max": 30.0,
+  "seed": 2026,
+  "mode": "overfit"
+}

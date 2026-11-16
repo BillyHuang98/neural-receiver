@@ -1,0 +1,33 @@
+# Python environments and caches
+.venv*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local editor settings and temporary files
+.vscode/
+.idea/
+~$*
+*.tmp
+*.log
+tmp/
+output/playwright/
+.DS_Store
+Thumbs.db
+
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# runs/, results/, chats/ and legacy/ are intentionally versioned:
+# they contain the project's small experiment archives and learning records.

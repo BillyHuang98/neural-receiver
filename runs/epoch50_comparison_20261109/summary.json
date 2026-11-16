@@ -1,0 +1,54 @@
+{
+  "training_config": {
+    "train_frames": 4000,
+    "val_frames": 600,
+    "epochs": 50,
+    "batch_size": 512,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "hidden_dim": 128,
+    "ebn0_min": 0.0,
+    "ebn0_max": 40.0,
+    "seed": 2026,
+    "mode": "normal"
+  },
+  "checkpoint_epochs": {
+    "best20": 15,
+    "epoch20": 20,
+    "best50": 37,
+    "epoch50": 50
+  },
+  "first20_history_max_abs_difference": 0.0,
+  "diagnostics": [
+    {
+      "condition": "40dB",
+      "total_bits": 960000,
+      "ls_zf_bit_errors": 23,
+      "ls_zf_ber": 2.3958333333333334e-05,
+      "best20_bit_errors": 134,
+      "best20_ber": 0.00013958333333333333,
+      "epoch20_bit_errors": 175,
+      "epoch20_ber": 0.00018229166666666667,
+      "best50_bit_errors": 117,
+      "best50_ber": 0.000121875,
+      "epoch50_bit_errors": 112,
+      "epoch50_ber": 0.00011666666666666667
+    },
+    {
+      "condition": "no_noise",
+      "total_bits": 960000,
+      "ls_zf_bit_errors": 0,
+      "ls_zf_ber": 0.0,
+      "best20_bit_errors": 107,
+      "best20_ber": 0.00011145833333333334,
+      "epoch20_bit_errors": 168,
+      "epoch20_ber": 0.000175,
+      "best50_bit_errors": 106,
+      "best50_ber": 0.00011041666666666666,
+      "epoch50_bit_errors": 92,
+      "epoch50_ber": 9.583333333333334e-05
+    }
+  ],
+  "original_files_changed": [],
+  "interpretation": "Single training seed; best checkpoints selected by mixed-SNR validation loss. Actual epoch 20 and epoch 50 are also evaluated to isolate extra training."
+}
